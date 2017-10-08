@@ -2,7 +2,8 @@ a, a:link{
     text-decoration: none;
     display: inline-block;
     color: #1592D8;
-    
+    font-family: '맑은고딕';
+    font-size: 25px;
 }
 
 a:hover {
