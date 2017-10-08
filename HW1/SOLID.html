@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<script>
+    var c = 0;
+    var max = 5;
+    function btn(num){
+        document.getElementById("ppt").src = num + ".html";
+    }
+    function next(){
+        if (c == max) {
+            return;
+        }
+        btn(++c)
+    }
+    function prev(){
+        if (c == 0) {
+            return;
+        }
+        btn(--c)
+    }
+</script>
+<html>
+<link rel = "stylesheet" type = "text/css" href = "sheet.css"/>
+<body>
+    <div class = "centerd-wrapper">
+        <h1>객체지향프로그래밍에서 지켜야 할 5가지 원칙</h1>
+    </div>
+    <br>
+    <div class= "side">
+        
+        <ul style="list-style-type:none; margin:0;padding:0">
+            <li>
+                <button class="btnside" onclick="btn(0)">0</button>
+            </li>
+            <li>
+                <button class="btnside" onclick="btn(1)">1</button>
+            </li>
+            <li>
+                <button class="btnside" onclick="btn(2)">2</button>
+            </li>
+            <li>
+                <button class="btnside" onclick="btn(3)">3</button>
+            </li>
+            <li>
+                <button class="btnside" onclick="btn(4)">4</button>
+            </li>
+            <li>
+                <button class="btnside" onclick="btn(5)">5</button>
+            </li>
+        </ul>
+    </div>
+        
+    <div class="iframe-wrapper">
+        <iframe class="noscroll" id="ppt" src="0.html" scrolling="no" width="80%" style= "height: 70%" frameborder=0 ></iframe>
+        
+    </div>
+        <div class="footer">
+            <button class="previous" onclick="prev()">&laquo; Prev</button>
+            <button class="next" onclick="next()">Next &raquo;</button>
+        </div>
+    
+    
+</body>
+</html>
